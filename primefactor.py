@@ -1,14 +1,15 @@
-s=input("Enter")
-res=""
-c=1
-for i in range(len(s)):
-    if (i+1 < len(s) and s[i]==s[i+1]):
-        c+=1
-    else:
-        res=res+s[i]
-        res=res+str(c)
-        c=1
-print(res)        
+def prime(n,a):
+    if n==1:
+        return 
+    i=2
+    while n%i != 0:
+        i+=1
+    print(i,end=" ")
+    prime(n//i,a)
+prime(n,2)    
+
+
+
     
     
 
